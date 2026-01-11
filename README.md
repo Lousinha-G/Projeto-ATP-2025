@@ -264,7 +264,7 @@ Esta é a interface central onde ocorre a monitorização dinâmica da clínica.
 
 * **Painel de Botões**: Botões que permitem a exibição das janelas de parâmetros, estatísticas e gráficos, respetivamente.
 
-![](./imagens/imagem2.jpeg)
+![](./imagens/imagem4.jpeg)
 
 ## 7.3. Janela de Parâmetros
 Esta interface permite a personalização das condições iniciais do cenário clínico. É nesta fase que o utilizador define a carga de trabalho e a capacidade de resposta da unidade de saúde.
