@@ -239,6 +239,9 @@ Para além da monitorização numérica, a aplicação utiliza a biblioteca `mat
 * **Distribuição por Especialidade**: Um histograma que quantifica o volume de consultas realizadas em cada área médica, auxiliando na gestão de recursos humanos da clínica.
 
 
+![](./imagens/imagem6.jpeg)
+
+
 
 ## 7. Interface Gráfica com FreeSimpleGUI
 A interface gráfica foi desenvolvida utilizando a biblioteca FreeSimpleGUI, proporcionando uma experiência de utilizador intuitiva e interativa. A aplicação está estruturada em diferentes janelas que acompanham o fluxo lógico da simulação:
