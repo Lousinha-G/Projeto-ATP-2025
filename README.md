@@ -250,24 +250,7 @@ Esta interface constitui a primeira barreira de segurança do sistema, replicand
 
 * **Segurança de Entrada**: Utilização do parâmetro `password_char` para ocultar caracteres sensíveis.
 
-```python
-layout_autenticacao = [
-    [sg.Text("Autenticação", font=("Helvetica", 20), justification="center")],
-    [sg.Text("Introduza os seus dados para realizar uma Simulação")],
-    [sg.Text("", size=(1,1))], 
-    [sg.Text("Login:", size=(10,1)), sg.Input(key='-LOGIN-')],
-    [sg.Text("Password:", size=(10,1)), sg.Input(password_char="*", key='-PASSWORD-')],
-    [sg.Text("", size=(1,1))], 
-    [sg.Button("Iniciar"), sg.Button("Sair")]
-]
-
-window_autenticacao = sg.Window(
-    "Autenticação", 
-    layout_autenticacao,
-    size=(500, 250),
-    element_justification="center"
-)
-```
+![](./imagens/imagem1.jpeg)
 
 ## 7.2. Janela de Simulação Principal
 Esta é a interface central onde ocorre a monitorização dinâmica da clínica. Está organizada em três componentes principais para permitir uma visão abrangente do sistema:
@@ -278,19 +261,7 @@ Esta é a interface central onde ocorre a monitorização dinâmica da clínica.
 
 * **Painel de Botões**: Botões que permitem a exibição das janelas de parâmetros, estatísticas e gráficos, respetivamente.
 
-```python
-layout_simulacao = [
-    [sg.Text("Simulação de Clínica Médica", font=("Helvetica", 20))],
-    [
-        sg.Column(layout_tabelas),  
-        sg.VerticalSeparator(),
-        sg.Column(layout_consultorio), 
-        sg.VerticalSeparator(),
-        sg.Column(layout_graficos)    
-    ],
-    [sg.Button("Iniciar"), sg.Button("Pausar"), sg.Button("Parar"), sg.Button("Estatísticas")]
-]
-```
+![](./imagens/imagem2.jpeg)
 
 ## 7.3. Janela de Parâmetros
 Esta interface permite a personalização das condições iniciais do cenário clínico. É nesta fase que o utilizador define a carga de trabalho e a capacidade de resposta da unidade de saúde.
@@ -301,19 +272,7 @@ Esta interface permite a personalização das condições iniciais do cenário c
 
 * **Controlo de Fluxo**: Botões de ação para validar os parâmetros e transitar para o motor de simulação.
 
-```python
-def criar_layout_params():
-    return [
-        [sg.Text("Definir Parâmetros Iniciais da Simulação")],
-        [sg.Text("Tempo de simulação: (min)"), sg.Input(key='-TEMPO-')],
-        [sg.Text("Taxa de chegada de pacientes: (pacientes/hora)"), sg.Input(key='-TAXA-')],
-        [sg.Text("Médicos disponíveis:"), sg.Input(key='-MEDICOS-')],
-        [sg.Text("Tempo médio de consulta: (min)"), sg.Input(key='-CONSULTA-')],
-        [sg.Text("Tipo de distribuição:"), sg.Combo(["Exponencial", "Uniforme", "Normal"], default_value="Exponencial", key='-DIST-', readonly=True)],
-        [sg.Button("Definir"), sg.Button("Sair")]
-    ]
-```
-
+![](./imagens/imagem3.jpeg)
 
 ## 7.4. Janela de Estatísticas
 Janela de resumo da simulação, permitindo uma leitura rápida do desempenho da clínica. O sistema organiza os dados recolhidos durante a execução e apresenta-os sob a forma de médias estatísticas.
@@ -324,23 +283,7 @@ Janela de resumo da simulação, permitindo uma leitura rápida do desempenho da
 
 * **Eficiência Médica**: Revela a percentagem de tempo que os médicos passaram efetivamente a atender pacientes, assim como quantos pacientes estes conseguiram atender na totalidade.
 
-```python
-def criar_layout_estatisticas():
-    return [
-        [sg.Text("Estatísticas", font=("Helvetica", 14, "bold"))],
-        [sg.Text("Tempo médio de espera:"), sg.Text("", key='-EST_ESPERA-')],
-        [sg.Text("Tempo médio de consulta:"), sg.Text("", key='-EST_CONSULTA-')],
-        [sg.Text("Tempo médio na clínica:"), sg.Text("", key='-EST_CLINICA-')],
-        [sg.Text("Tamanho médio da fila:"), sg.Text("", key='-EST_FILA_MEDIA-')],
-        [sg.Text("Tamanho máximo da fila:"), sg.Text("", key='-EST_FILA_MAX-')],
-        [sg.Text("Ocupação dos médicos:"), sg.Text("", key='-EST_OCUPACAO-')],
-        [sg.Text("Pacientes atendidos:"), sg.Text("", key='-EST_ATENDIDOS-')],
-
-        [sg.Button("Fechar")]
-    ]
-```
-
-
+![](./imagens/imagem5.jpeg)
 
 ## 8. Como utilizar o programa?
 
